@@ -136,7 +136,7 @@ if [ "$DISTRO" = "arch" ]; then
         niri \
         waybar \
         alacritty foot \
-        swaync wlogout \
+        swaync \
         rofi rofi-emoji \
         swaylock swayidle swaybg \
         cliphist wl-clipboard \
@@ -150,7 +150,7 @@ if [ "$DISTRO" = "arch" ]; then
     if command -v paru &>/dev/null; then
         paru -S --needed --noconfirm xwayland-satellite 2>/dev/null || true
     elif command -v yay &>/dev/null; then
-        yay -S --needed --noconfirm xwayland-satellite 2>/dev/null || true
+        yay -S --needed --noconfirm xwayland-satellite wlogout 2>/dev/null || true
     else
         echo -e "${YELLOW}  → Install paru or yay for AUR packages, or skip:${NC}"
         echo "    xwayland-satellite (X11 app support, recommended)"
